@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/coinListScreenFragment">
+    <fragment
+        android:id="@+id/coinListScreenFragment"
+        android:name="com.example.finalcryptoapp.presentation.coin_list.CoinListScreenFragment"
+        android:label="fragment_coin_list_screen"
+        tools:layout="@layout/fragment_coin_list_screen" >
+        <action
+            android:id="@+id/action_coinListScreenFragment_to_coinDetailsFragment"
+            app:destination="@id/coinDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coinDetailsFragment"
+        android:name="com.example.finalcryptoapp.presentation.coin_detail.CoinDetailsFragment"
+        android:label="fragment_coin_details"
+        tools:layout="@layout/fragment_coin_details" >
+        <argument
+            android:name="coinId"
+            app:argType="string"
+            android:defaultValue="you did not " />
+    </fragment>
+</navigation>
